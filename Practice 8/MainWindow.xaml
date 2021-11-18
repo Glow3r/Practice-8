@@ -1,0 +1,65 @@
+﻿<Window x:Class="Practice_8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice_8"
+        mc:Ignorable="d"
+        Title="Practice 8, variant 12" Height="380" Width="260" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" MinHeight="380" MinWidth="260">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="0,2" />
+            <Setter Property="FontSize" Value="9.3"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel Height="30" Width="70" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox x:Name="firsttriadA"  Width="30" Height="30" />
+                <TextBox x:Name="secondtriadA" Width="30" Height="30" Margin="10,0,0,0"/>
+            </StackPanel>
+            <Label Content="Пара А:" Height="25" Width="65" Margin="10,0" HorizontalAlignment="Left"/>
+        </Grid>
+
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Файл" Height="20">
+                <MenuItem Header="Выход" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Справка" Height="20">
+                <MenuItem Header="О программе" Click="Information_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <Grid Grid.Row="1">
+            <StackPanel   Height="30" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox x:Name="firsttriadB" Width="30" Height="30" />
+                <TextBox x:Name="secondtriadB" Width="30" Height="30" Margin="10,0,0,0"/>
+            </StackPanel>
+            <Label Content="Пара B:" Height="25" Width="65" Margin="10,0" HorizontalAlignment="Left"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <TextBox x:Name="outputResult" Width="100" Height="30" HorizontalAlignment="Center"/>
+            <Label Content="Результат:" Height="25" Width="65" Margin="10,0" HorizontalAlignment="Left"/>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <StackPanel  Height="120" Orientation="Vertical" HorizontalAlignment="Center">
+                <Button Content="Сложение пары А" Height="20" Width="130" HorizontalAlignment="Center" Click="Sum_Click" />
+                <Button Content="Вычитание пары А" Height="20" Width="130" HorizontalAlignment="Center" Click="DIfference_Click" />
+                <Button Content="Умножение пары А" Height="20" Width="130" HorizontalAlignment="Center" Click="Product_Click" />
+                <Button Content="Деление пары А" Height="20" Width="130" HorizontalAlignment="Center" Click="Quotient_Click" />
+                <Button Content="Проверка пар на равенство" Height="20" Width="130" HorizontalAlignment="Center" Click="Compare_Click" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
